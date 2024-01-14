@@ -2,7 +2,8 @@
   "name": "@stmarkus/coptic-font-unicode-converter",
   "version": "1.0.0",
   "description": "converts coptic non-unicode characters to coptic unicode",
-  "main": "index.js",
+  "main": "index.mjs",
+  "type": "module",
   "dependencies": {
     "exceljs": "^4.4.0"
   },
