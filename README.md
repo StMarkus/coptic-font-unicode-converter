@@ -12,13 +12,13 @@ More Information:
 ## Installation
 
 ```sh
-npm install --production
+npm install @stmarkus/coptic-font-unicode-converter
 ```
 
 ## Usage
 
 ```javascript
-import { convertCopticText } from "./index.js";
+import { convertCopticText } from "@stmarkus/coptic-font-unicode-converter";
 
 const copticPhrase = ";Ele;/con ;/mac ;o Yeoc";
 const font = "NEW_ATHANASIUS";
