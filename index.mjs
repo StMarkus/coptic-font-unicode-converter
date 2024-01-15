@@ -1,5 +1,11 @@
 import ExcelJS from "exceljs";
+import path from 'path';
+import { fileURLToPath } from 'url';
 import { JimkinCombining, switchCharForJimkin } from "./Jimkin.js";
+
+// to reference the excel-file correctly
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // CONSTANTS
 const COPTIC_FONT_COL_START = 6;
@@ -14,7 +20,7 @@ const COPTIC_CHAR_ROW_END = 112;
 const COPTIC_CHAR_KEY_COL = 2;
 
 const WORKBOOK = new ExcelJS.Workbook();
-const EXCEL_FILE = "all2Unicode.xlsx";
+const EXCEL_FILE = __dirname + "/all2Unicode.xlsx";
 const SHEETNAME = "mapping";
 
 /**
@@ -25,7 +31,7 @@ const SHEETNAME = "mapping";
  * @param {*} copticPhrase
  * @param {*} jimkin
  */
-export function convertCopticText(font, copticPhrase, jimkin) {
+function convertCopticText(font, copticPhrase, jimkin) {
   // Load the workbook from a file
   WORKBOOK.xlsx
     .readFile(EXCEL_FILE)
@@ -157,3 +163,5 @@ export function convertCopticText(font, copticPhrase, jimkin) {
       console.error("Error reading Excel file:", error.message);
     });
 }
+
+export default convertCopticText;

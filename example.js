@@ -1,4 +1,4 @@
-import { convertCopticText } from "./index.js";
+import convertCopticText from "./index.mjs";
 
 const copticPhrase = ";Ele;/con ;/mac ;o Yeoc";
 const font = "NEW_ATHANASIUS";
