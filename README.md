@@ -24,7 +24,8 @@ const copticPhrase = ";Ele;/con ;/mac ;o Yeoc";
 const font = "NEW_ATHANASIUS";
 const jimkin = "COMBINE_WITH_CHAR_AFTER";
 
-convertCopticText(font, copticPhrase, jimkin);
+const convertedText = await convertCopticText(font, copticPhrase, jimkin);
+console.log("convertedText: ", convertedText);
 ```
 
 ### Supported Coptic Non-Unicode Fonts 
@@ -63,3 +64,32 @@ convertCopticText(font, copticPhrase, jimkin);
 | COMBINE_WITH_CHAR_BEFORE | The charachter before the Jimkin gets combined |
 | COMBINE_WITH_CHAR_AFTER | The charachter after the Jimkin gets combined |
 | NONE | No combining method |
+
+## Method overview
+
+#### `async function convertCopticText(font, copticPhrase, jimkin)`
+converts the given string into coptic unicode characters if they match characters of the supported non-unicode fonts
+
+ * **Parameters:**
+   * `font` — non-unicode font name of the provided coptic non-unicode text
+   * `copticPhrase` — coptic non-unicode text
+   * `jimkin` — jimkin jimkin combining method (COMBINE_WITH_CHAR_BEFORE, COMBINE_WITH_CHAR_AFTER, NONE)
+ * **Returns:** converted text
+
+#### `async function fontSupported(fontToCheck)`
+check if provided coptic non-unicode font is valid
+ * **Parameters:** `{*}` — font to check
+ * **Returns:** true if font is supported and can be converted, else false
+
+#### `async function getSupportedCopticFonts()`
+returns a list of supported non-unicode fonts which can be converted to unicode
+ * **Returns:** list of font-names
+
+#### `function jimkinMethodValid(jimkin)`
+check if provided jimkin combining method is valid
+ * **Parameters:** `jimkin` — method name to check
+ * **Returns:** true if provided jimkin combining method is valid, else false
+
+#### `function getJimkinCombiningMethods()`
+returns a list of valid jimkin combining methods
+ * **Returns:** list of valid jimkin combining methods
