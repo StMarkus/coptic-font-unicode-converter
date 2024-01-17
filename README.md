@@ -1,5 +1,5 @@
 
-# coptic-unicode-converter
+# coptic-font-unicode-converter
 
 Converts Coptic non-unicode text to Coptic Unicode.
 
@@ -102,4 +102,4 @@ returns a list of valid jimkin combining methods
 
 ## Release Notes
 ### 1.0.3
-- added Coptic Symbols and handling and Nomina Sacra 
+- added handling of Coptic Symbols and Nomina Sacra 
