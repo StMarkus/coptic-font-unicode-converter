@@ -7,11 +7,9 @@ Coptic Unicode block was added to version 4.1 of the Unicode Standard to write t
 More Information:
 - [Coptic (Unicode block)](https://en.wikipedia.org/wiki/Coptic_(Unicode_block))
 - [Coptic on symbl.cc](https://symbl.cc/en/unicode/blocks/coptic/)
-
 - [Coptic Fonts and How-to type in Coptic (CopticChurch.net)](https://www.copticchurch.net/coptic_fonts)
 - [Coptic Unicode Keyboard](https://www.lexilogos.com/keyboard/coptic.htm)
-- [Coptic on symbl.cc](https://symbl.cc/en/unicode/blocks/coptic/)
-- [Coptic on symbl.cc](https://symbl.cc/en/unicode/blocks/coptic/)
+
 
 
 ## Installation
