@@ -98,3 +98,8 @@ check if provided jimkin combining method is valid
 #### `function getJimkinCombiningMethods()`
 returns a list of valid jimkin combining methods
  * **Returns:** list of valid jimkin combining methods
+
+
+## Release Notes
+### 1.0.3
+- added Coptic Symbols and handling and Nomina Sacra 
