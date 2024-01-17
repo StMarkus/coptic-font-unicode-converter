@@ -1,6 +1,6 @@
 {
   "name": "@stmarkus/coptic-font-unicode-converter",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "converts coptic non-unicode characters to coptic unicode",
   "main": "index.mjs",
   "type": "module",
