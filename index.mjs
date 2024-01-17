@@ -11,7 +11,7 @@ const __dirname = path.dirname(__filename);
 const COPTIC_FONT_COL_START = 6;
 const COPTIC_FONT_COL_END = 32;
 const COPTIC_FONT_ROW_START = 2;
-const COPTIC_FONT_ROW_END = 109;
+const COPTIC_FONT_ROW_END = 113;
 const COPTIC_FONT_UNICODE_COL = 5;
 
 const workbook = new ExcelJS.Workbook();

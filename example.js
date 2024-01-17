@@ -18,7 +18,9 @@ console.log("jMethod: ", jMethod);
 const jMethods = getJimkinCombiningMethods();
 console.log("jMethods: ", jMethods);
 
-const copticPhrase = ";Ele;/con ;/mac ;o Yeoc";
+const copticPhrase =
+  "Ten y/nou ;e;pswi ;nte ;e;P_ ;nte nijom. Hiten nieu,/ ;nte ni= : P_ ;ari;hmot nan : ;pse ;nte pi+";
+
 const font = "NEW_ATHANASIUS";
 const jimkin = "COMBINE_WITH_CHAR_AFTER";
 const convertedText = await convertCopticText(font, copticPhrase, jimkin);
