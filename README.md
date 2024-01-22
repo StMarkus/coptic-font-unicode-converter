@@ -99,5 +99,8 @@ returns a list of valid jimkin combining methods
 
 
 ## Release Notes
+### 1.1.0
+- added support for Coptic non-unicode font Coptic1
+- added jest tests
 ### 1.0.3
 - added handling of Coptic Symbols and Nomina Sacra 
