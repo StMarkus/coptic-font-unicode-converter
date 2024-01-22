@@ -9,13 +9,13 @@ const __dirname = path.dirname(__filename);
 
 // CONSTANTS
 const COPTIC_FONT_COL_START = 6;
-const COPTIC_FONT_COL_END = 32;
+const COPTIC_FONT_COL_END = 34;
 const COPTIC_FONT_ROW_START = 2;
 const COPTIC_FONT_ROW_END = 113;
 const COPTIC_FONT_UNICODE_COL = 5;
 
 const workbook = new ExcelJS.Workbook();
-const EXCEL_FILE = __dirname + "/all2Unicode.xlsx";
+const EXCEL_FILE = __dirname + "/all2Unicode_v2.xlsx";
 const SHEETNAME = "mapping";
 
 /**
