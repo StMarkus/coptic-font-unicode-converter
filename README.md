@@ -46,6 +46,7 @@ console.log("convertedText: ", convertedText);
   - ANTONIOUSJ
   - ANTONIOUSOL
   - COPTIC
+  - COPTIC1
   - COPTICII
   - COPTONEW
   - KOPTOS
