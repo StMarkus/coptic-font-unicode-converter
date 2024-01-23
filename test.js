@@ -45,8 +45,8 @@ let convertCOPTIC1 = await convertCopticText(
   "P/rp ety~ro m~p~h/t m~v~rwmi e~ounof: e~p~jiny~re pefho rasi qen ouneh: m~v~r/] e~tauernis] n~je nekh~b/oui~ Po#c#: k~yamio~ n~hwb niben qen oucovia~. a#l#.",
   "COMBINE_WITH_CHAR_BEFORE"
 );
-// test("Testing converting COPTIC1 text.", () => {
-//   expect(
-//     "Ⲡⲏⲣⲡ ⲉⲧⲑ̀ⲣⲟ ⲙ̀ⲡ̀ϩⲏⲧ ⲙ̀ⲫ̀ⲣⲱⲙⲓ ⲉ̀ⲟⲩⲛⲟϥ: ⲉ̀ⲡ̀ϫⲓⲛⲑ̀ⲣⲉ ⲡⲉϥϩⲟ ⲣⲁϣⲓ ϧⲉⲛ ⲟⲩⲛⲉϩ: ⲙ̀ⲫ̀ⲣⲏϯ ⲉ̀ⲧⲁⲩⲉⲣⲛⲓϣϯ ⲛ̀ϫⲉ ⲛⲉⲕϩ̀ⲃⲏⲟⲩⲓ̀ Ⲡⲟ̅ ⲥ̅ : ⲕ̀ⲑⲁⲙⲓⲟ̀ ⲛ̀ϩⲱⲃ ⲛⲓⲃⲉⲛ ϧⲉⲛ ⲟⲩⲥⲟⲫⲓⲁ̀ ⲁ̅ ⲗ̅"
-//   ).toBe(convertCOPTIC1);
-// });
+test("Testing converting COPTIC1 text.", () => {
+  expect(
+    "Ⲡⲏⲣⲡ ⲉⲧⲑ̀ⲣⲟ ⲙ̀ⲡ̀ϩⲏⲧ ⲙ̀ⲫ̀ⲣⲱⲙⲓ ⲉ̀ⲟⲩⲛⲟϥ: ⲉ̀ⲡ̀ϫⲓⲛⲑ̀ⲣⲉ ⲡⲉϥϩⲟ ⲣⲁϣⲓ ϧⲉⲛ ⲟⲩⲛⲉϩ: ⲙ̀ⲫ̀ⲣⲏϯ ⲉ̀ⲧⲁⲩⲉⲣⲛⲓϣϯ ⲛ̀ϫⲉ ⲛⲉⲕϩ̀ⲃⲏⲟⲩⲓ̀ Ⲡⲟ̅ⲥ̅: ⲕ̀ⲑⲁⲙⲓⲟ̀ ⲛ̀ϩⲱⲃ ⲛⲓⲃⲉⲛ ϧⲉⲛ ⲟⲩⲥⲟⲫⲓⲁ̀ ⲁ̅ⲗ̅"
+  ).toBe(convertCOPTIC1);
+});

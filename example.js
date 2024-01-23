@@ -1,27 +1,15 @@
-import {
-  jimkinMethodValid,
-  getJimkinCombiningMethods,
-  fontSupported,
-  getSupportedCopticFonts,
-  convertCopticText,
-} from "./index.mjs";
+import { convertCopticText } from "./index.mjs";
 
-const supported = await fontSupported("NEW_ATHANASIUS");
-console.log("Supported: ", supported);
+let newAthanasius = await convertCopticText(
+  "NEW_ATHANASIUS",
+  "Ten y/nou ;e;pswi ;nte ;e;P_ ;nte nijom. Hiten nieu,/ ;nte ni= : P_ ;ari;hmot nan : ;pse ;nte pi+",
+  "COMBINE_WITH_CHAR_AFTER"
+);
+console.log("convertedText: ", newAthanasius);
 
-const fonts = await getSupportedCopticFonts();
-console.log("Fonts: ", fonts);
-
-const jMethod = jimkinMethodValid("NONE");
-console.log("jMethod: ", jMethod);
-
-const jMethods = getJimkinCombiningMethods();
-console.log("jMethods: ", jMethods);
-
-const copticPhrase =
-  "Ten y/nou ;e;pswi ;nte ;e;P_ ;nte nijom. Hiten nieu,/ ;nte ni= : P_ ;ari;hmot nan : ;pse ;nte pi+";
-
-const font = "NEW_ATHANASIUS";
-const jimkin = "COMBINE_WITH_CHAR_AFTER";
-const convertedText = await convertCopticText(font, copticPhrase, jimkin);
-console.log("convertedText: ", convertedText);
+let coptic1 = await convertCopticText(
+  "COPTIC1",
+  "P/rp ety~ro m~p~h/t m~v~rwmi e~ounof: e~p~jiny~re pefho rasi qen ouneh: m~v~r/] e~tauernis] n~je nekh~b/oui~ Po#c#: k~yamio~ n~hwb niben qen oucovia~. a#l#.",
+  "COMBINE_WITH_CHAR_BEFORE"
+);
+console.log("convertedText: ", coptic1);

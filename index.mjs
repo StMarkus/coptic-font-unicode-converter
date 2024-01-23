@@ -2,6 +2,7 @@ import ExcelJS from "exceljs";
 import path from "path";
 import { fileURLToPath } from "url";
 import { JimkinCombining, switchCharForJimkin } from "./Jimkin.js";
+import { removeCharAfterOverline } from "./Overline.js";
 
 // to reference the excel-file correctly
 const __filename = fileURLToPath(import.meta.url);
@@ -29,13 +30,23 @@ async function getCopticFontMatrix() {
     await workbook.xlsx.readFile(EXCEL_FILE);
     const worksheet = workbook.getWorksheet(SHEETNAME);
     //
-    for (let colInd = COPTIC_FONT_COL_START; colInd < COPTIC_FONT_COL_END; colInd++) {
+    for (
+      let colInd = COPTIC_FONT_COL_START;
+      colInd < COPTIC_FONT_COL_END;
+      colInd++
+    ) {
       let fontName = worksheet.getRow(1).getCell(colInd).value;
       // create a map to hold the column data for this row
       let rowData = new Map();
       // loop through the columns of the row
-      for (let rowInd = COPTIC_FONT_ROW_START; rowInd < COPTIC_FONT_ROW_END; rowInd++) {
-        let unicodeVal = worksheet.getRow(rowInd).getCell(COPTIC_FONT_UNICODE_COL).value;
+      for (
+        let rowInd = COPTIC_FONT_ROW_START;
+        rowInd < COPTIC_FONT_ROW_END;
+        rowInd++
+      ) {
+        let unicodeVal = worksheet
+          .getRow(rowInd)
+          .getCell(COPTIC_FONT_UNICODE_COL).value;
         let fontChar = worksheet.getRow(rowInd).getCell(colInd).value;
         if ((fontChar !== "") & (!unicodeVal !== "")) {
           rowData.set(fontChar, unicodeVal);
@@ -86,7 +97,9 @@ export function jimkinMethodValid(jimkin) {
     jimkin !== JimkinCombining.COMBINE_WITH_CHAR_BEFORE &&
     jimkin !== JimkinCombining.COMBINE_WITH_CHAR_AFTER
   ) {
-    console.error(`Provided jimkin combining method ${jimkin} is not supported!`);
+    console.error(
+      `Provided jimkin combining method ${jimkin} is not supported!`
+    );
     console.log("Supported Methods: ", JimkinCombining);
     return false;
   } else {
@@ -131,11 +144,15 @@ export async function convertCopticText(font, copticPhrase, jimkin) {
   }
 
   // Jimkin combining
-  let finalResult = "";
+  let postJimkinCombining = "";
   if (jimkin !== JimkinCombining.NONE) {
-    finalResult = switchCharForJimkin(sb.join(""), jimkin);
+    postJimkinCombining = switchCharForJimkin(sb.join(""), jimkin);
   } else {
-    finalResult = sb.join("");
+    postJimkinCombining = sb.join("");
   }
-  return finalResult;
+
+  // Overline - remove char after overline, because its empty
+  let postOverlineHandling = removeCharAfterOverline(postJimkinCombining);
+
+  return postOverlineHandling;
 }
