@@ -100,6 +100,8 @@ returns a list of valid jimkin combining methods
 
 
 ## Release Notes
+### 1.1.3
+- corrected include of Font Matrix
 ### 1.1.2
 - Updated Font Matrix (all2Unicode_v3.xlsx): added dot handling for fonts Coptic and Coptic1
 ### 1.1.1
