@@ -16,7 +16,7 @@ const COPTIC_FONT_ROW_END = 113;
 const COPTIC_FONT_UNICODE_COL = 5;
 
 const workbook = new ExcelJS.Workbook();
-const EXCEL_FILE = __dirname + "/all2Unicode_v2.xlsx";
+const EXCEL_FILE = __dirname + "/all2Unicode_v3.xlsx";
 const SHEETNAME = "mapping";
 
 /**
